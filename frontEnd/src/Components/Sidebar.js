@@ -3,6 +3,7 @@ import { Avatar, IconButton } from "@material-ui/core"
 import DonutLargeIcon from "@material-ui/icons/DonutLarge"
 import ChatIcon from "@material-ui/icons/Chat";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import { SearchOutlined } from "@material-ui/icons";
 
 import './Sidebar.css'
 
@@ -28,6 +29,7 @@ function Sidebar() {
             </div>
 
             <div className="sidebar__search">
+                <SearchOutlined />
 
             </div>
 
