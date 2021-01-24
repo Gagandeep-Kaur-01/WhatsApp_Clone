@@ -4,6 +4,14 @@
   flex: 0.35;
 }
 
+.sidebar__search {
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  height: 39px;
+  padding: 10px;
+}
+
 .sidebar__header {
   display: flex;
   justify-content: space-between;
