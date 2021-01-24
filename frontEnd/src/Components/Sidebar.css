@@ -21,6 +21,11 @@
   border-radius: 20px;
 }
 
+.sidebar__searchContainer > input {
+  border: none;
+  margin-left: 10px;
+}
+
 .sidebar__header {
   display: flex;
   justify-content: space-between;
