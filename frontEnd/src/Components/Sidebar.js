@@ -30,7 +30,7 @@ function Sidebar() {
 
             <div className="sidebar__search">
                 <SearchOutlined />
-
+                <input placeholder="Search or start new chat" type="text" />
             </div>
 
             <div className="sidebar_chats">
