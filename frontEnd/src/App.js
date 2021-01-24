@@ -3,7 +3,8 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    // BEM naming conventions 
+    <div className="app">
       <h1> Hey! Another project</h1>      
     </div>
   );
