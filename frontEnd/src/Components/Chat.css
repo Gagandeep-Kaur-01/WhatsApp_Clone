@@ -35,6 +35,12 @@
   background-color: #ffffff;
 }
 
+.chat__name {
+  position: absolute;
+  top: 0px;
+  font-weight: 800;
+}
+
 .chat__headerRight {
   display: flex;
   justify-content: space-between;
