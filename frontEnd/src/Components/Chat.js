@@ -4,7 +4,18 @@ import "./Chat.css";
 function Chat() {
     return(
         <div className="chat">
-            Chat component
+
+            <div className="chat__header">
+
+            </div>
+
+            <div className="chat__body">
+
+            </div>
+
+            <div className="chat__footer">
+                
+            </div>
         </div> 
     )
 }
