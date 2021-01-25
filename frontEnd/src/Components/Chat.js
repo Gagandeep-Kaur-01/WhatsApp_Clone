@@ -1,7 +1,9 @@
+import React, { useState, useEffect } from 'react';
 import { Avatar, IconButton } from "@material-ui/core";
 import { AttachFile, InsertEmoticon, MoreVert, SearchOutlined } from "@material-ui/icons";
+import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
+import MicIcon from "@material-ui/icons/Mic";
 
-import React, { useState, useEffect } from 'react';
 import "./Chat.css";
 
 function Chat() {
