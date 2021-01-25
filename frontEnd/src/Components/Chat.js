@@ -1,13 +1,19 @@
 import { Avatar } from "@material-ui/core";
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import "./Chat.css";
 
 function Chat() {
+    const [seed, setSeed] = useState('');
+
+    useEffect(() => {
+      setSeed(Math.floor(Math.random() * 5000))
+    }, []);
+
     return(
         <div className="chat">
 
             <div className="chat__header">
-                <Avatar />
+                <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
 
             </div>
 
