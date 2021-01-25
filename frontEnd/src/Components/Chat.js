@@ -14,8 +14,9 @@ function Chat() {
       setSeed(Math.floor(Math.random() * 5000))
     }, []);
 
-    const sendMessage = () => {
-
+    const sendMessage = (e) => {
+        e.preventDefault();
+        console.log('You typed >>>', input);
     }
 
     return(
@@ -63,8 +64,17 @@ function Chat() {
                 <InsertEmoticonIcon />
 
                 <form>
-                    <input placeholder="Type a message" type="text" />
-                    <button onClick={sendMessage} type="submit"> Send a message </button>
+                    <input 
+                      value={input} 
+                      onChange= {(e) => setInput(e.target.value)}
+                      placeholder="Type a message" 
+                      type="text" 
+                    />
+                    <button 
+                      onClick={sendMessage} 
+                      type="submit"> 
+                      Send a message 
+                    </button>
                 </form>
 
                 <MicIcon />
