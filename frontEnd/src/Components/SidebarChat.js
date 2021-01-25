@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Avatar } from "@material-ui/core"
 import './SidebarChat.css'
 
 function SidebarChat() {
+    const [seed, setSeed] = useState('');
 
     useEffect(() => {
 
