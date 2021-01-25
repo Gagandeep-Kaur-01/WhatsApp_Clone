@@ -7,6 +7,7 @@ import MicIcon from "@material-ui/icons/Mic";
 import "./Chat.css";
 
 function Chat() {
+    const [input, setInput] = useState("");
     const [seed, setSeed] = useState('');
 
     useEffect(() => {
@@ -14,7 +15,7 @@ function Chat() {
     }, []);
 
     const sendMessage = () => {
-        
+
     }
 
     return(
