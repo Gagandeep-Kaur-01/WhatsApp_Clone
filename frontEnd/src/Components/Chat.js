@@ -40,6 +40,7 @@ function Chat() {
 
             <div className="chat__body">
                 <p className={`chat__message ${true && 'chat__receiver'}`}>
+               {/*<p className={`chat__message ${message.name === user.displayName && 'chat__receiver'}`}> */}
                 <span className="chat__name">
                     Gagan
                 </span>
