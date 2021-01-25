@@ -13,6 +13,10 @@ function Chat() {
       setSeed(Math.floor(Math.random() * 5000))
     }, []);
 
+    const sendMessage = () => {
+        
+    }
+
     return(
         <div className="chat">
 
@@ -59,7 +63,7 @@ function Chat() {
 
                 <form>
                     <input placeholder="Type a message" type="text" />
-                    <button> Send a message </button>
+                    <button onClick={sendMessage} type="submit"> Send a message </button>
                 </form>
 
                 <MicIcon />
