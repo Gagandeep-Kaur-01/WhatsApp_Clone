@@ -26,6 +26,15 @@
   color: gray;
 }
 
+.chat__message {
+  position: relative;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 10px;
+  width: fit-content;
+  background-color: #ffffff;
+}
+
 .chat__headerRight {
   display: flex;
   justify-content: space-between;
