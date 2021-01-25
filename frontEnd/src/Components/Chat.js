@@ -44,6 +44,10 @@ function Chat() {
                     Gagan
                 </span>
                     Hey Guys..
+
+                <span className="chat__timestamp">
+                    3.50pm
+                </span>    
                 </p>                
             </div>
 
