@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Sidebar from './Components/Sidebar';
-import ChatIcon from './Components/Chat';
+import Chat from './Components/Chat';
 
 function App() {
   return (
