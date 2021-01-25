@@ -11,13 +11,17 @@ function SidebarChat({ addNewChat }) {
     }, [])
 
 
-    return(
+    return !addNewChat ? (
         <div className="sidebarChat">
             <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
             <div className="sidebarChat__info">
                 <h2> Room Name </h2>
                 <p>Last message...</p> 
             </div>
+        </div>
+    ) : (
+        <div onClick= {createChat} className="sidebarChat">
+            <h2> Add new Chat</h2>
         </div>
     )
 }
