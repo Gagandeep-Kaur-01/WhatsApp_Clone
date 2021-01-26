@@ -9,6 +9,8 @@ import SidebarChat from './SidebarChat'
 import './Sidebar.css'
 
 function Sidebar() {
+  const [rooms, setRooms] = useState([]);
+  
     return (
         <div className="sidebar">
 
