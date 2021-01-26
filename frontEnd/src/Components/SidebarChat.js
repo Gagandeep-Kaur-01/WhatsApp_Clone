@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Avatar } from "@material-ui/core"
 import './SidebarChat.css'
 
-function SidebarChat({ addNewChat }) {
+function SidebarChat({ id, name, addNewChat }) {
     const [seed, setSeed] = useState('');
 
     // for taking random values/ images (Avatars)
