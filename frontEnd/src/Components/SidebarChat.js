@@ -16,7 +16,9 @@ function SidebarChat({ id, name, addNewChat }) {
 
         if(roomName) {
             // do some clever database stuff here....
-            db.collection('room')
+            db.collection('rooms').add({
+                name: roomName,
+            });
         }
     };
 
