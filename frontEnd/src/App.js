@@ -3,10 +3,12 @@ import './App.css';
 import Sidebar from './Components/Sidebar';
 import Chat from './Components/Chat';
 import Login from "./Components/Login"
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { useStateValue } from "./redux/StateProvider";
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [{ user }, dispatch] = useStateValue();
+  
   return (
     // BEM naming conventions 
     <div className="app"> 
