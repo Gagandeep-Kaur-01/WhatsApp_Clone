@@ -41,7 +41,7 @@ function Chat() {
                 <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
 
                 <div className="chat__headerInfo">
-                    <h3> Room name </h3>
+                    <h3> {roomName}</h3>
                     <p> Last seen at ... </p>
                 </div>
 
