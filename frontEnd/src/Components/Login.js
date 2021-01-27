@@ -2,8 +2,10 @@ import React from 'react';
 import { Button } from "@material-ui/core";
 import "./Login.css";
 import { auth, provider } from '../firebase';
+import { useStateValue } from '../redux/StateProvider';
 
 function Login() {
+    const [{}, dispatch] = useStateValue();
     
     //Google Authentication
     const signIn = () => {
