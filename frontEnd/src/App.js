@@ -5,6 +5,7 @@ import Chat from './Components/Chat';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
+  const [user, setUser] = useState(null);
   return (
     // BEM naming conventions 
     <div className="app"> 
