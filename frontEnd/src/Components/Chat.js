@@ -4,6 +4,7 @@ import { AttachFile, InsertEmoticon, MoreVert, SearchOutlined } from "@material-
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import MicIcon from "@material-ui/icons/Mic";
 import { useParams } from "react-router-dom";
+import db from "../firebase"
 
 import "./Chat.css";
 
@@ -14,6 +15,11 @@ function Chat() {
     const [roomName, setRoomName] = useState("");
 
     useEffect(() => {
+      if(roomId) {
+        db.collection('rooms').doc(roomId).onSnapshot(snapshot => (
+          setRoomName(snapshot.data().name)
+        ))
+      }
       
     }, [roomId]);
 
