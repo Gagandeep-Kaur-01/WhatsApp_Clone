@@ -6,21 +6,24 @@ import Chat from './Components/Chat';
 function App() {
   return (
     // BEM naming conventions 
-    <div className="app">  
-
+    <div className="app"> 
       <div className="app__body">
         <Router>
-          <Switch>   
+          <Switch>  
+            
+            <Route path="/app">
+              <Sidebar />
+              <Chat />  
+            </Route> 
+
             <Route path="/">
               <h1> Home Screen </h1>
             </Route>      
-            <Sidebar />
-            <Chat />          
+                   
           </Switch> 
         </Router>     
         
-      </div>   
-
+      </div>
     </div>
   );
 }
