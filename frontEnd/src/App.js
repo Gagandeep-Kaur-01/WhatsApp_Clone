@@ -9,9 +9,12 @@ function App() {
     <div className="app">  
 
       <div className="app__body">
-        
-        <Sidebar />
-        <Chat />        
+        <Router>
+          <Switch>         
+            <Sidebar />
+            <Chat />          
+          </Switch> 
+        </Router>     
         
       </div>   
 
