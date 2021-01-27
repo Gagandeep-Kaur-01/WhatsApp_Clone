@@ -10,7 +10,10 @@ function App() {
 
       <div className="app__body">
         <Router>
-          <Switch>         
+          <Switch>   
+            <Route path="/">
+              <h1> Home Screen </h1>
+            </Route>      
             <Sidebar />
             <Chat />          
           </Switch> 
