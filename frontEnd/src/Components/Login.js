@@ -1,15 +1,14 @@
-import { Button } from '@material-ui/core';
-import React from 'react'
-import { Button } from "@material-ui/core"
+import React from 'react';
+import { Button } from "@material-ui/core";
 import "./Login.css";
 
 function Login() {
-    
+
     const signIn = () => {
 
     };
 
-    return(
+    return (
         <div className="login">
           <div className="Login__container">
 
@@ -30,4 +29,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Login;
