@@ -14,6 +14,10 @@ function Chat() {
     const [roomName, setRoomName] = useState("");
 
     useEffect(() => {
+      
+    }, [roomId]);
+
+    useEffect(() => {
       setSeed(Math.floor(Math.random() * 5000))
     }, []);
 
