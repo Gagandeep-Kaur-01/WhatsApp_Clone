@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Sidebar from './Components/Sidebar';
 import Chat from './Components/Chat';
@@ -9,9 +9,15 @@ function App() {
   return (
     // BEM naming conventions 
     <div className="app"> 
-      <div className="app__body">
-        <Router>
-            
+
+    {/* if there is no user,
+        then show some kind of login screen;
+        otherwise shows the app*/}
+      {!user ? (
+        <h1> Login </h1>
+      ) : (
+        <div className="app__body">
+          <Router>            
             <Sidebar />
 
             <Switch>
@@ -23,10 +29,10 @@ function App() {
               <Chat />
             </Route>      
                    
-          </Switch> 
-        </Router>     
-        
+           </Switch> 
+          </Router> 
       </div>
+      )}      
     </div>
   );
 }
