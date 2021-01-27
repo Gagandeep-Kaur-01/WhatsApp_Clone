@@ -1,10 +1,26 @@
+import { Button } from '@material-ui/core';
 import React from 'react'
+import { Button } from "@material-ui/core"
 import "./Login.css";
 
 function Login() {
     return(
         <div className="login">
-            <h1>Login</h1>
+          <div className="Login__container">
+
+            <img  
+                src="https://upload.wikimedia.org/wikipedia"
+                alt=""
+            />
+            <div className="logpin__text">
+                <h1> Sign in to WhatsApp</h1>
+            </div> 
+            <Button 
+                onClick={signIn}>
+                    Sign in with Google
+            </Button> 
+
+          </div>
         </div>
     )
 }
