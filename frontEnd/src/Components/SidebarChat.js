@@ -19,7 +19,7 @@ function SidebarChat({ id, name, addNewChat }) {
               doc.data()))
           );
         }
-    }, [])
+    }, [id])
 
     // for taking random values/ images (Avatars)
     useEffect(() => {
