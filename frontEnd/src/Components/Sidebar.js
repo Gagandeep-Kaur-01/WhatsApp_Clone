@@ -35,7 +35,7 @@ function Sidebar() {
         <div className="sidebar">
 
             <div className="sidebar__header">
-                <Avatar src={user?.photoURL} />
+                <Avatar src={user?.photoURL} /> {/* Get the profile image of user's google account*/}
                 <div className="sidebar__headerRight">
                     <IconButton>
                       <DonutLargeIcon />
