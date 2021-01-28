@@ -71,17 +71,20 @@ function Chat() {
             </div>
 
             <div className="chat__body">
+              {messages.map(message => (
                 <p className={`chat__message ${true && 'chat__receiver'}`}>
-               {/*<p className={`chat__message ${message.name === user.displayName && 'chat__receiver'}`}> */}
-                <span className="chat__name">
-                    Gagan
-                </span>
-                    Hey Guys..
-
-                <span className="chat__timestamp">
-                    3.50pm
-                </span>    
-                </p>                
+                  {/*<p className={`chat__message ${message.name === user.displayName && 'chat__receiver'}`}> */}
+                 <span className="chat__name">
+                     Gagan
+                 </span>
+                     Hey Guys..
+ 
+                 <span className="chat__timestamp">
+                     3.50pm
+                 </span>    
+                 </p>  
+              ))}
+                              
             </div>
 
             <div className="chat__footer">
