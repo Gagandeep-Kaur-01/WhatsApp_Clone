@@ -75,12 +75,12 @@ function Chat() {
                 <p className={`chat__message ${true && 'chat__receiver'}`}>
                   {/*<p className={`chat__message ${message.name === user.displayName && 'chat__receiver'}`}> */}
                  <span className="chat__name">
-                     Gagan
+                    {message.name}
                  </span>
-                     Hey Guys..
+                     {message.message}
  
                  <span className="chat__timestamp">
-                     3.50pm
+                      {new Date(message.timestamp?.toDate()).toUTCString()}
                  </span>    
                  </p>  
               ))}
