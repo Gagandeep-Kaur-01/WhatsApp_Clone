@@ -13,7 +13,7 @@ function Chat() {
     const [seed, setSeed] = useState('');
     const { roomId } = useParams();
     const [roomName, setRoomName] = useState("");
-    
+    const [messages, setMessages] = useState([]);
 
     useEffect(() => {
       if(roomId) {
