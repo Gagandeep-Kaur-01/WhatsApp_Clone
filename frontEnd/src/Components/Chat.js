@@ -40,6 +40,10 @@ function Chat() {
         e.preventDefault();
         console.log('You typed >>>', input);
 
+        db.collection('rooms').doc(roomId).collection('messages').add({
+          
+        })
+
         setInput("");
     }
 
