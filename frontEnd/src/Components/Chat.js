@@ -6,9 +6,9 @@ import MicIcon from "@material-ui/icons/Mic";
 import { useParams } from "react-router-dom";
 import db from "../firebase";
 import firebase from "firebase";
+import { useStateValue } from "../redux/StateProvider"
 
 import "./Chat.css";
-import { useStateValue } from '../redux/StateProvider';
 
 function Chat() {
     const [input, setInput] = useState("");
