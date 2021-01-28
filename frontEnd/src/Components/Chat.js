@@ -46,7 +46,7 @@ function Chat() {
         db.collection('rooms').doc(roomId).collection('messages').add({
           message: input,
           name: user.displayName, //name key: user.displayName (is from google authentication)
-          timestamp: //use server timestamp
+          timestamp: firebase.firestore.FieldValue.serverTimestamp(), //use server timestamp
         })
 
         setInput("");
