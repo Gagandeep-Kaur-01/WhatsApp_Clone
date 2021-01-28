@@ -4,7 +4,8 @@ import { AttachFile, InsertEmoticon, MoreVert, SearchOutlined } from "@material-
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import MicIcon from "@material-ui/icons/Mic";
 import { useParams } from "react-router-dom";
-import db from "../firebase"
+import db from "../firebase";
+import firebase from "firebase";
 
 import "./Chat.css";
 import { useStateValue } from '../redux/StateProvider';
