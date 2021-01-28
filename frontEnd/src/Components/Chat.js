@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import db from "../firebase"
 
 import "./Chat.css";
+import { useStateValue } from '../redux/StateProvider';
 
 function Chat() {
     const [input, setInput] = useState("");
@@ -14,6 +15,7 @@ function Chat() {
     const { roomId } = useParams();
     const [roomName, setRoomName] = useState("");
     const [messages, setMessages] = useState([]);
+    const [{ user }, dispatch] = useStateValue();
 
     useEffect(() => {
       if(roomId) {
@@ -41,7 +43,9 @@ function Chat() {
         console.log('You typed >>>', input);
 
         db.collection('rooms').doc(roomId).collection('messages').add({
-          
+          message: input,
+          name: user.displayName, //name key: user.displayName (is from google authentication)
+          timestamp: //use server timestamp
         })
 
         setInput("");
