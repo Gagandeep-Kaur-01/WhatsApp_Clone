@@ -13,6 +13,7 @@ function Chat() {
     const [seed, setSeed] = useState('');
     const { roomId } = useParams();
     const [roomName, setRoomName] = useState("");
+    
 
     useEffect(() => {
       if(roomId) {
@@ -20,6 +21,12 @@ function Chat() {
         .doc(roomId)
         .onSnapshot(snapshot => (
           setRoomName(snapshot.data().name)
+        ));
+
+        db.collection('rooms').doc(roomId).
+        collection("messages").orderBy
+        ('timestamp', 'asc').onSnapshot(snapshot => (
+          setMessages(snapshot.docs.map(doc => doc.data()))
         ))
       }
       
