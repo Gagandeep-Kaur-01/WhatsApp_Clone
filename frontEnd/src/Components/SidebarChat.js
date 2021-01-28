@@ -8,9 +8,14 @@ function SidebarChat({ id, name, addNewChat }) {
     const [seed, setSeed] = useState('');
 
     useEffect(() => {
-        return () => {
-            effect
-        };
+        if (id) {
+          db.collection('rooms').doc(id)
+          .collection('messages')
+          .orderBy('timestamp', 'desc')
+          .onSnapshot(snapshot => (
+              
+          ))
+        }
     }, [input])
 
     // for taking random values/ images (Avatars)
