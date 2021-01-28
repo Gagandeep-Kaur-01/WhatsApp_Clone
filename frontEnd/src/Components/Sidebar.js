@@ -6,20 +6,24 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 import { SearchOutlined } from "@material-ui/icons";
 import SidebarChat from './SidebarChat'
 import db from "../firebase";
+import { useStateValue } from "../redux/StateProvider";
 
 import './Sidebar.css'
 
 function Sidebar() {
   const [rooms, setRooms] = useState([]);
+  const [{ user }, dispatch] = useStateValue();
 
   useEffect(() => {
-    const unsubscribe = db.collection('rooms').onSnapshot(snapshot => (
-      setRooms(snapshot.docs.map(doc =>
+    const unsubscribe = db.collection('rooms').
+    onSnapshot((snapshot) => (
+      setRooms(
+        snapshot.docs.map((doc) =>
         ({
           id: doc.id,
           data: doc.data(),
-        })
-      ))
+        }))
+      )
     ))
 
     return () => {
@@ -31,7 +35,7 @@ function Sidebar() {
         <div className="sidebar">
 
             <div className="sidebar__header">
-                <Avatar />
+                <Avatar src={user?.photoURL} />
                 <div className="sidebar__headerRight">
                     <IconButton>
                       <DonutLargeIcon />
