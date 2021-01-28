@@ -7,6 +7,12 @@ import { Link } from "react-router-dom";
 function SidebarChat({ id, name, addNewChat }) {
     const [seed, setSeed] = useState('');
 
+    useEffect(() => {
+        return () => {
+            effect
+        };
+    }, [input])
+
     // for taking random values/ images (Avatars)
     useEffect(() => {
       setSeed(Math.floor(Math.random() * 5000))
